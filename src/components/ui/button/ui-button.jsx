@@ -1,9 +1,11 @@
 import cn from 'classnames';
 
-function UiButton({ children, outline }) {
+function UiButton({ children, outline, onClick, className }) {
     return (
         <>
-            <button className={cn('button', {
+            <button
+                onClick={onClick}
+                className={cn('button', className, {
                 'button--outline': outline,
             })}>
                 {children}
