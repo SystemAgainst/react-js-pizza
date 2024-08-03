@@ -3,9 +3,7 @@ import { useState } from 'react';
 function CategoryList({ items, onClick }) {
     const [activeItem, setActiveItem] = useState(null);
 
-    const onSelectItem = (idx) => {
-        setActiveItem((prevIndex) => prevIndex + idx);
-    };
+    const onSelectItem = (idx) => setActiveItem(idx);
 
     return (
         <div className="categories">
@@ -20,7 +18,7 @@ function CategoryList({ items, onClick }) {
                     items && items.map((item, idx) => (
                         <li
                             className={activeItem === idx ? 'active' : ''}
-                            onClick={() => onSelectItem}
+                            onClick={() => onSelectItem(idx)}
                             key={`${item}_${idx}`}
                         >
                             {item}
