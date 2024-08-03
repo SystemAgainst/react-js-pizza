@@ -2,6 +2,7 @@ import './App.css'
 import {CategoryList, Header} from "./components/index.js";
 
 function App() {
+
   return (
       <>
         <div className="wrapper">
@@ -10,7 +11,7 @@ function App() {
             <div className="container">
               <div className="content__top">
 
-                <CategoryList />
+                <CategoryList items={['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']} />
 
                 <div className="sort">
                   <div className="sort__label">
