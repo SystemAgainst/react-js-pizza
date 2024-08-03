@@ -1,5 +1,5 @@
 import logo from "../../assets/img/pizza-logo.svg";
-import UiButton from "../ui/button/ui-button.jsx";
+import {UiButton} from "../index.js";
 
 function Header() {
     return (
