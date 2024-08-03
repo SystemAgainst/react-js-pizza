@@ -48,7 +48,6 @@ function Header() {
                             </svg>
                             <span>3</span>
                         </UiButton>
-                        <a href="/cart.html" className="button button--cart"></a>
                     </div>
                 </div>
             </div>
