@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import PropTypes from "prop-types";
 
 function UiButton({ children, outline, onClick, className }) {
     return (
@@ -13,5 +14,9 @@ function UiButton({ children, outline, onClick, className }) {
         </>
     );
 }
+
+UiButton.propTypes = {
+    onClick: PropTypes.func,
+};
 
 export default UiButton;

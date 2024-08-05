@@ -1,8 +1,8 @@
 import './App.css'
 import { Header } from "./components/index.js";
 import { Home, Cart } from "./pages/index.js";
-import {Route, Routes} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
