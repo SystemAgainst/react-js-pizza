@@ -3,16 +3,16 @@ import { Header } from "./components/index.js";
 import { Home, Cart } from "./pages/index.js";
 import {Route, Routes} from "react-router-dom";
 import {useEffect, useState} from "react";
+import axios from "axios";
 
 function App() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5173/db.json`)
-            .then((resp) => resp.json())
-            .then((json) => {
-                setItems(json.pizzas);
-            })
+        axios.get(`http://localhost:5173/db.json`)
+            .then(({ data }) => {
+                setItems(data.pizzas);
+            });
     }, []);
 
   return (
